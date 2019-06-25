@@ -10,6 +10,15 @@ import UIKit
 
 class HomeScreen: UIViewController {
     
+    var loginTitle: UILabel = {
+      var label = UILabel()
+        label.text = "Log in"
+        label.font = .boldSystemFont(ofSize: 30)
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     var facebookbtn: UIButton = {
        let button = UIButton()
         button.setTitle("Log in with Facebook", for: .normal)
@@ -105,18 +114,33 @@ class HomeScreen: UIViewController {
         stackView.axis = .vertical
         stackView.spacing = 15
         stackView.distribution = .fillEqually
+        
+        setupNavbar()
         setupDesign()
         setupViews()
-        
-        
-        
+   
         
     }
 
     
     
     
+    func setupNavbar(){
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "left-arrow").withRenderingMode(.alwaysOriginal), style: .done, target: nil, action: nil)
+        
+        // Hides the navigation bar background so it becomes transparent
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = .clear
+    
+    }
+    
+    
     func setupDesign() {
+        
+        
+        view.addSubview(loginTitle)
         view.addSubview(facebookbtn)
         view.addSubview(facebookView)
         view.addSubview(facebookLogo)
@@ -135,7 +159,13 @@ class HomeScreen: UIViewController {
     
     func setupViews() {
         NSLayoutConstraint.activate([
-              facebookbtn.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            
+            loginTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            loginTitle.leadingAnchor.constraint(equalTo: facebookbtn.leadingAnchor),
+            loginTitle.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
+            
+            
+              facebookbtn.topAnchor.constraint(equalTo: loginTitle.safeAreaLayoutGuide.topAnchor, constant: 75),
               facebookbtn.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
               facebookbtn.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
               facebookbtn.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
