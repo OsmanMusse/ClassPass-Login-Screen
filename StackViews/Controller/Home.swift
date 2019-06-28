@@ -10,6 +10,8 @@ import UIKit
 
 class HomeScreen: UIViewController {
     
+    
+    
     var loginTitle: UILabel = {
       var label = UILabel()
         label.text = "Log in"
@@ -73,11 +75,12 @@ class HomeScreen: UIViewController {
         return textField
     }()
     
-    var loginBtn: UIButton =  {
+    lazy var loginBtn: UIButton =  {
        let button = UIButton()
         button.setTitle("Log in", for: .normal)
         button.setTitleColor( UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1), for: .normal)
         button.backgroundColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
+        button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -107,6 +110,7 @@ class HomeScreen: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
         stackView.addArrangedSubview(optionLabel)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passwordTextField)
@@ -120,6 +124,11 @@ class HomeScreen: UIViewController {
         setupViews()
    
         
+    }
+    
+    @objc func buttonClick(){
+        print("Button Clicked")
+        navigationController?.pushViewController(FindCity(), animated: true)
     }
 
     

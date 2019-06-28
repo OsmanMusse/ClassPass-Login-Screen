@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D379BC5922BF0CEE0020F489 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379BC5822BF0CEE0020F489 /* AppDelegate.swift */; };
-		D379BC5B22BF0CEE0020F489 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379BC5A22BF0CEE0020F489 /* ViewController.swift */; };
+		D379BC5B22BF0CEE0020F489 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379BC5A22BF0CEE0020F489 /* Home.swift */; };
 		D379BC6022BF0CEF0020F489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D379BC5F22BF0CEF0020F489 /* Assets.xcassets */; };
 		D379BC6322BF0CEF0020F489 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D379BC6122BF0CEF0020F489 /* LaunchScreen.storyboard */; };
 		D379BC6E22BF0CF00020F489 /* StackViewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379BC6D22BF0CF00020F489 /* StackViewsTests.swift */; };
 		D379BC7922BF0CF00020F489 /* StackViewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379BC7822BF0CF00020F489 /* StackViewsUITests.swift */; };
+		D3EC1B6722C55CCD007290A7 /* FindCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC1B6622C55CCD007290A7 /* FindCity.swift */; };
+		D3EC1B6B22C59F9C007290A7 /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3EC1B6A22C59F9C007290A7 /* CustomTextfield.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,7 @@
 /* Begin PBXFileReference section */
 		D379BC5522BF0CEE0020F489 /* StackViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D379BC5822BF0CEE0020F489 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D379BC5A22BF0CEE0020F489 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D379BC5A22BF0CEE0020F489 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		D379BC5F22BF0CEF0020F489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D379BC6222BF0CEF0020F489 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D379BC6422BF0CEF0020F489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		D379BC7422BF0CF00020F489 /* StackViewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StackViewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D379BC7822BF0CF00020F489 /* StackViewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewsUITests.swift; sourceTree = "<group>"; };
 		D379BC7A22BF0CF00020F489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3EC1B6622C55CCD007290A7 /* FindCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindCity.swift; sourceTree = "<group>"; };
+		D3EC1B6A22C59F9C007290A7 /* CustomTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				D379BC5822BF0CEE0020F489 /* AppDelegate.swift */,
-				D379BC5A22BF0CEE0020F489 /* ViewController.swift */,
+				D3EC1B6822C570C5007290A7 /* Controller */,
+				D3EC1B6922C59F74007290A7 /* View */,
 				D379BC5F22BF0CEF0020F489 /* Assets.xcassets */,
 				D379BC6122BF0CEF0020F489 /* LaunchScreen.storyboard */,
 				D379BC6422BF0CEF0020F489 /* Info.plist */,
@@ -120,6 +125,23 @@
 				D379BC7A22BF0CF00020F489 /* Info.plist */,
 			);
 			path = StackViewsUITests;
+			sourceTree = "<group>";
+		};
+		D3EC1B6822C570C5007290A7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D379BC5A22BF0CEE0020F489 /* Home.swift */,
+				D3EC1B6622C55CCD007290A7 /* FindCity.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D3EC1B6922C59F74007290A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D3EC1B6A22C59F9C007290A7 /* CustomTextfield.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,8 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D379BC5B22BF0CEE0020F489 /* ViewController.swift in Sources */,
+				D3EC1B6B22C59F9C007290A7 /* CustomTextfield.swift in Sources */,
+				D379BC5B22BF0CEE0020F489 /* Home.swift in Sources */,
 				D379BC5922BF0CEE0020F489 /* AppDelegate.swift in Sources */,
+				D3EC1B6722C55CCD007290A7 /* FindCity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
