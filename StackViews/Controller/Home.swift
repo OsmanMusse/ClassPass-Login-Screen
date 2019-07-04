@@ -78,6 +78,7 @@ class HomeScreen: UIViewController {
     lazy var loginBtn: UIButton =  {
        let button = UIButton()
         button.setTitle("Log in", for: .normal)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 15)
         button.setTitleColor( UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1), for: .normal)
         button.backgroundColor = UIColor(red: 228/255, green: 228/255, blue: 228/255, alpha: 1)
         button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
@@ -110,7 +111,7 @@ class HomeScreen: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+      
         stackView.addArrangedSubview(optionLabel)
         stackView.addArrangedSubview(emailTextField)
         stackView.addArrangedSubview(passwordTextField)
@@ -128,11 +129,12 @@ class HomeScreen: UIViewController {
     
     @objc func buttonClick(){
         print("Button Clicked")
-        navigationController?.pushViewController(FindCity(), animated: true)
+        navigationController?.pushViewController(FindCity(), animated: false)
     }
-
     
+  
     
+  
     
     func setupNavbar(){
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "left-arrow").withRenderingMode(.alwaysOriginal), style: .done, target: nil, action: nil)
@@ -153,13 +155,8 @@ class HomeScreen: UIViewController {
         view.addSubview(facebookbtn)
         view.addSubview(facebookView)
         view.addSubview(facebookLogo)
-    
-       
-         
-        
         view.addSubview(stackView)
-        
-     view.addSubview(forgotLabel)
+        view.addSubview(forgotLabel)
      
         
         
